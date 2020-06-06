@@ -72,6 +72,7 @@ if __name__ == '__main__':
     if params.train_aug:
         checkpoint_dir += '_aug'
     checkpoint_dir += '_%dway_%dshot' %( params.train_n_way, params.n_shot)
+    print('checkpoint_dir:', checkpoint_dir)
 
     #modelfile   = get_resume_file(checkpoint_dir)
 
