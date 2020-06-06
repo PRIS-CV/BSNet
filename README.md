@@ -12,20 +12,15 @@ Code release for the paper [BSNet: Bi-Similarity Network for Few-shot Fine-grain
 
 ## Dataset
 
-#### Stanford-Dogs
-
-#### Stanford-Cars
-
-#### FGVC-Aircraft
-
 #### CUB-200-2011
+
+* Change directory to `./filelists/CUB`
+* run `source ./download_CUB.sh`
 
 ## Training
 
-* dataset: CUB/dogs/cars/aircraft.
-* model: the type of embedding module. Conv{4|6} / ResNet{10|18|34|50|101}.
-* method: relationnet/CosineBatch/OurNet.
-* n_shot: number of labeled data in each class, same as n_support.
+* method: relationnet|CosineBatch|OurNet.
+* n_shot: number of labeled data in each class （1|5）.
 * train_aug: perform data augmentation or not during training.
 * gpu: gpu id.
 
@@ -78,9 +73,19 @@ python ./test.py --dataset CUB  --model Conv4 --method OurNet      --n_shot 5 --
         <td align='center'></td>
     </tr>
 </table>
+## Citation
 
+If you find this paper useful in your research, please consider citing:
 
+```
 
+```
 
+## References
+Our testbed builds upon several existing publicly available code. Specifically, we have modified and integrated the following code into this project:
 
+* Framework, Backbone, Dataset, Method: Relational Network
+  https://github.com/wyharveychen/CloserLookFewShot 
+
+  
 
