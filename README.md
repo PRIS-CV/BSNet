@@ -26,8 +26,8 @@ Code release for the paper [BSNet: Bi-Similarity Network for Few-shot Fine-grain
 
 ```shell
 python ./train.py --dataset CUB  --model Conv4 --method relationnet --n_shot 5 --train_aug --gpu 0
-python ./train.py --dataset CUB  --model Conv4 --method CosineBatch --n_shot 5 --train_aug --gpu 1
-python ./train.py --dataset CUB  --model Conv4 --method OurNet      --n_shot 5 --train_aug --gpu 2
+python ./train.py --dataset CUB  --model Conv4 --method CosineBatch --n_shot 5 --train_aug --gpu 0
+python ./train.py --dataset CUB  --model Conv4 --method OurNet      --n_shot 5 --train_aug --gpu 0
 ```
 
 ## Save features
@@ -73,7 +73,6 @@ python ./test.py --dataset CUB  --model Conv4 --method OurNet      --n_shot 5 --
         <td align='center'></td>
     </tr>
 </table>
-
 ## Citation
 
 If you find this paper useful in your research, please consider citing:
