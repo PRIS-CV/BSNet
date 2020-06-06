@@ -42,6 +42,7 @@ def save_features(model, data_loader, outfile ):
 
 if __name__ == '__main__':
     params = parse_args('save_features')
+    os.environ["CUDA_VISIBLE_DEVICES"] = str(params.gpu)
     assert params.method != 'maml' and params.method != 'maml_approx', 'maml do not support save_feature and run'
 
     if 'Conv' in params.model:
