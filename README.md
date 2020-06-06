@@ -12,12 +12,6 @@ Code release for the paper [BSNet: Bi-Similarity Network for Few-shot Fine-grain
 
 ## Dataset
 
-#### Stanford-Dogs
-
-#### Stanford-Cars
-
-#### FGVC-Aircraft
-
 #### CUB-200-2011
 
 ## Training
