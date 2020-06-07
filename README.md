@@ -85,7 +85,6 @@ If you find this paper useful in your research, please consider citing:
 ```
 
 ## References
-Our code is based on Chen's contribution. Specifically, except for cosine network and BSNet, everything else have modified and integrated the following publicly available code https://github.com/wyharveychen/CloserLookFewShot.
-
+Our code is based on Chen's contribution. Specifically, except for our core design, cosine network and BSNet, everything else （e.g. backbone, dataset, relation network, evaluation standards, hyper-parameters）are built on and integrated in https://github.com/wyharveychen/CloserLookFewShot.
   
 
