@@ -85,10 +85,7 @@ If you find this paper useful in your research, please consider citing:
 ```
 
 ## References
-Our code is based on Chen's contribution. Specifically, we have modified and integrated the following publicly available code into this project:
-
-* Framework, Backbone, Dataset, Method: Relational Network
-  https://github.com/wyharveychen/CloserLookFewShot 
+Our code is based on Chen's contribution. Specifically, except for cosine network and BSNet, everything else have modified and integrated the following publicly available code https://github.com/wyharveychen/CloserLookFewShot.
 
   
 
