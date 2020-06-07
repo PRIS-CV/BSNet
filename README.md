@@ -17,7 +17,7 @@ Code release for the paper [BSNet: Bi-Similarity Network for Few-shot Fine-grain
 * Change directory to `./filelists/CUB`
 * run `source ./download_CUB.sh`
 
-## Training
+## Train
 
 * method: relationnet|CosineBatch|OurNet.
 * n_shot: number of labeled data in each class （1|5）.
@@ -54,25 +54,26 @@ python ./test.py --dataset CUB  --model Conv4 --method OurNet      --n_shot 5 --
     </tr>
     <tr>
         <td align='center'></td>
-        <td align='center'>5-shot</td>
-        <td align='center'>1-shot</td>
+        <td align='center'>5-way 5-shot Accuracy (%)</td>
+        <td align='center'>5-way 1-shot Accuracy (%)</td>
     </tr>
     <tr>
-        <td align='center'>RelationNet</td>
-        <td align='center'></td>
-        <td align='center'></td>
+        <td align='center'>Relation Network</td>
+        <td align='center'>77.87 &plusmn; 0.64</td>
+        <td align='center'>63.94 &plusmn; 0.92</td>
     </tr>
     <tr>
-        <td align='center'>CosineNet</td>
-        <td align='center'></td>
-        <td align='center'></td>
+        <td align='center'>Cosine Network</td>
+        <td align='center'>77.86 &plusmn; 0.68</td>
+        <td align='center'>65.04 &plusmn; 0.97</td>
     </tr>
     <tr>
-        <td align='center'>R&C (Ours)</td>
-        <td align='center'></td>
-        <td align='center'></td>
+        <td align='center'>BSNet (R&C)</td>
+        <td align='center'><b>80.99 &plusmn; 0.63</b></td>
+        <td align='center'><b>65.89 &plusmn; 1.00</b></td>
     </tr>
 </table>
+
 
 
 ## Citation
@@ -84,7 +85,7 @@ If you find this paper useful in your research, please consider citing:
 ```
 
 ## References
-Our testbed builds upon several existing publicly available code. Specifically, we have modified and integrated the following code into this project:
+Our code is based on Chen's contribution. Specifically, we have modified and integrated the following publicly available code into this project:
 
 * Framework, Backbone, Dataset, Method: Relational Network
   https://github.com/wyharveychen/CloserLookFewShot 

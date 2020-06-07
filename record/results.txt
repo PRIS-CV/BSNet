@@ -1,0 +1,6 @@
+Time: 20200607-140241, Setting: CUB-novel-Conv4-relationnet-aug 1shot 5way_train 5way_test, Acc: 600 Test Acc = 62.59% +- 0.97% 
+Time: 20200607-140305, Setting: CUB-novel-Conv4-CosineBatch-aug 1shot 5way_train 5way_test, Acc: 600 Test Acc = 64.97% +- 0.97% 
+Time: 20200607-140330, Setting: CUB-novel-Conv4-OurNet-aug 1shot 5way_train 5way_test, Acc: 600 Test Acc = 66.11% +- 0.89% 
+Time: 20200607-140419, Setting: CUB-novel-Conv4-relationnet-aug 5shot 5way_train 5way_test, Acc: 600 Test Acc = 77.59% +- 0.67% 
+Time: 20200607-140444, Setting: CUB-novel-Conv4-CosineBatch-aug 5shot 5way_train 5way_test, Acc: 600 Test Acc = 77.57% +- 0.71% 
+Time: 20200607-140519, Setting: CUB-novel-Conv4-OurNet-aug 5shot 5way_train 5way_test, Acc: 600 Test Acc = 80.77% +- 0.65% 
