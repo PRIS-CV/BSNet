@@ -48,7 +48,10 @@ if __name__ == '__main__':
 
     checkpoint_dir = '%s/checkpoints/%s/%s_%s' %(configs.save_dir, params.dataset, params.model, params.method)
 
-    checkpoint_dir += '_aug_%dway_%dshot' %(params.train_n_way, params.n_shot)
+    if params.train_aug:
+        checkpoint_dir += '_aug'
+    checkpoint_dir += '_%dway_%dshot' %( params.train_n_way, params.n_shot)
+
 
 
     modelfile   = get_best_file(checkpoint_dir)

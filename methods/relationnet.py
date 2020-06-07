@@ -39,58 +39,7 @@ class RelationNet(MetaTemplate):
 
         return relations
 
-    def set_forward_adaptation(self,x,is_feature = True): #overwrite parent function
-        assert is_feature == True, 'Finetune only support fixed feature' 
-        full_n_support = self.n_support
-        full_n_query = self.n_query
-        relation_module_clone = RelationModule( self.feat_dim , 8, self.loss_type )
-        relation_module_clone.load_state_dict(self.relation_module.state_dict())
- 
-
-        z_support, z_query  = self.parse_feature(x,is_feature)
-        z_support   = z_support.contiguous()
-        set_optimizer = torch.optim.SGD(self.relation_module.parameters(), lr = 0.01, momentum=0.9, dampening=0.9, weight_decay=0.001)
-
-        self.n_support = 3
-        self.n_query = 2
-
-        z_support_cpu = z_support.data.cpu().numpy()
-        for epoch in range(100):
-            perm_id = np.random.permutation(full_n_support).tolist()            
-            sub_x = np.array([z_support_cpu[i,perm_id,:,:,:] for i in range(z_support.size(0))])
-            sub_x = torch.Tensor(sub_x).cuda()
-            if self.change_way:
-                self.n_way  = sub_x.size(0)
-            set_optimizer.zero_grad()
-            y = torch.from_numpy(np.repeat(range( self.n_way ), self.n_query ))
-            scores = self.set_forward(sub_x, is_feature = True)
-            if self.loss_type == 'mse':
-                y_oh = utils.one_hot(y, self.n_way)
-                y_oh = Variable(y_oh.cuda())            
-
-                loss =  self.loss_fn(scores, y_oh )
-            else:
-                y = Variable(y.cuda())
-                loss = self.loss_fn(scores, y )
-            loss.backward()
-            set_optimizer.step()
-
-        self.n_support = full_n_support
-        self.n_query = full_n_query
-        z_proto     = z_support.view( self.n_way, self.n_support, *self.feat_dim ).mean(1) 
-        z_query     = z_query.contiguous().view( self.n_way* self.n_query, *self.feat_dim )
-
-        
-        z_proto_ext = z_proto.unsqueeze(0).repeat(self.n_query* self.n_way,1,1,1,1)
-        z_query_ext = z_query.unsqueeze(0).repeat( self.n_way,1,1,1,1)
-        z_query_ext = torch.transpose(z_query_ext,0,1)
-        extend_final_feat_dim = self.feat_dim.copy()
-        extend_final_feat_dim[0] *= 2
-        relation_pairs = torch.cat((z_proto_ext,z_query_ext),2).view(-1, *extend_final_feat_dim)
-        relations = self.relation_module(relation_pairs).view(-1, self.n_way)
-
-        self.relation_module.load_state_dict(relation_module_clone.state_dict())
-        return relations
+   
     def set_forward_loss(self, x):
         y = torch.from_numpy(np.repeat(range( self.n_way ), self.n_query ))
 
