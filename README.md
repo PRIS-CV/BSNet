@@ -1,5 +1,5 @@
 # BSNet
-Code release for the paper [BSNet: Bi-Similarity Network for Few-shot Fine-grained Image Classification](#). (In Peer Review)
+Code release for the paper [BSNet: Bi-Similarity Network for Few-shot Fine-grained Image Classification](#). (TIP2020)
 
 ## Requirements
 
