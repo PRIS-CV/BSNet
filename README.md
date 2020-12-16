@@ -1,5 +1,6 @@
 # BSNet
-Code release for the paper [BSNet: Bi-Similarity Network for Few-shot Fine-grained Image Classification](#). (TIP2020)
+
+Code release for the paper [BSNet: Bi-Similarity Network for Few-shot Fine-grained Image Classification](https://ieeexplore.ieee.org/document/9293172). (TIP2020)
 
 ## Requirements
 
@@ -76,22 +77,34 @@ python ./test.py --dataset CUB  --model Conv4 --method OurNet      --n_shot 5 --
 
 
 
+
 ## Citation
 
 If you find this paper useful in your research, please consider citing:
 
-```
-@ARTICLE{9293172,  author={X. {Li} and J. {Wu} and Z. {Sun} and Z. {Ma} and J. {Cao} and J. -H. {Xue}},  journal={IEEE Transactions on Image Processing},   title={BSNet: Bi-Similarity Network for Few-shot Fine-grained Image Classification},   year={2020},  volume={},  number={},  pages={1-1},  doi={10.1109/TIP.2020.3043128}}
+```bibtex
+@ARTICLE{9293172,  
+  author={X. {Li} and J. {Wu} and Z. {Sun} and Z. {Ma} and J. {Cao} and J. -H. {Xue}}, 
+  journal={IEEE Transactions on Image Processing},   
+  title={BSNet: Bi-Similarity Network for Few-shot Fine-grained Image Classification}, 
+  year={2020},  
+  volume={},  
+  number={},  
+  pages={1-1},  
+  doi={10.1109/TIP.2020.3043128}}
 ```
 
+
+
 ## References
+
 Our code is based on Chen's contribution. Specifically, except for our core design, cosine network and BSNet, everything else （e.g. backbone, dataset, relation network, evaluation standards, hyper-parameters）are built on and integrated in https://github.com/wyharveychen/CloserLookFewShot.
 
 ## Contact
+
 Thanks for your attention!
 If you have any suggestion or question, you can leave a message here or contact us directly:
+
 - spraisewu@gmail.com
 - mazhanyu@bupt.edu.cn
 - xiaoxulilut@gmail.com
-  
-
