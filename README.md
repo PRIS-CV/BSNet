@@ -83,14 +83,14 @@ python ./test.py --dataset CUB  --model Conv4 --method OurNet      --n_shot 5 --
 If you find this paper useful in your research, please consider citing:
 
 ```bibtex
-@ARTICLE{9293172,  
-  author={X. {Li} and J. {Wu} and Z. {Sun} and Z. {Ma} and J. {Cao} and J. -H. {Xue}}, 
-  journal={IEEE Transactions on Image Processing},   
+@ARTICLE{9293172,
+  author={X. {Li} and J. {Wu} and Z. {Sun} and Z. {Ma} and J. {Cao} and J. -H. {Xue}},
+  journal={IEEE Transactions on Image Processing}, 
   title={BSNet: Bi-Similarity Network for Few-shot Fine-grained Image Classification}, 
-  year={2020},  
-  volume={},  
-  number={},  
-  pages={1-1},  
+  year={2021},
+  volume={30},
+  number={},
+  pages={1318-1331},
   doi={10.1109/TIP.2020.3043128}}
 ```
 
